@@ -45,9 +45,8 @@ public class BestSellerBooksRecyclerViewAdapter extends RecyclerView.Adapter<Bes
         holder.mBookTitle.setText(holder.mItem.title);
         holder.mBookAuthor.setText(holder.mItem.author);
         holder.mBookDescription.setText(holder.mItem.description);
-        holder.mRank.setText(ranking);
-
         Glide.with(holder.mView).load(holder.mItem.bookImageUrl).centerInside().into(holder.ivCover);
+        holder.mRank.setText(ranking);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
